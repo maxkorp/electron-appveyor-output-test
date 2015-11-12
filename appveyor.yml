@@ -1,0 +1,16 @@
+environment:
+  nodejs_version: "4.1"
+  ELECTRON_VERSION: "0.34.3"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - cmd: npm install electron-prebuilt@%ELECTRON_VERSION%
+  - cmd: set PATH=%APPDATA%\npm;%PATH%
+  - cmd: set PATH=%APPDATA%\Roaming\npm;%PATH%
+
+test_script:
+  - cmd: node --version
+  - cmd: npm --version
+  - cmd: npm test
+
+build: off
