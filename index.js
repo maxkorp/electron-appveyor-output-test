@@ -30,9 +30,10 @@ function runSpawn(which, env, cb) {
       console.error('blurp: ' + code);
     }
 
-    console.log('\n\n\n');
-
-    if (cb) cb();
+    if (cb) {
+      console.log('\n\n\n');
+      cb();
+    }
   });
 }
 
@@ -48,9 +49,10 @@ function runExec(which, env, cb) {
       console.error('blurp: ' + err);
     }
 
-    console.log('\n\n\n');
-
-    if (cb) cb();
+    if (cb) {
+      console.log('\n\n\n');
+      cb();
+    }
   });
 }
 

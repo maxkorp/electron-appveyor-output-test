@@ -11,4 +11,4 @@ function err (str) {
 log('I AM A MESSAGE');
 err('I AM AN ERROR');
 
-process.exitCode = Math.round(Math.rand*100);
+process.exitCode = Math.round(Math.random()*100);
